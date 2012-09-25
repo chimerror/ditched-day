@@ -60,5 +60,21 @@ Instead of examining the player when the player is female and the player is merf
 
 Part 3 - Tests - Not for release
 
+Switching player gender is an action applying to nothing.
+Understand "switch-gender" as switching player gender.
+Carry out switching player gender:
+	If the player is male:
+		now the player is female;
+	Otherwise:
+		now the player is male.
+Report switching player gender: say "You decide life as the other gender would be better."
+
+Setting player species is an action applying to one species.
+Understand "set-my-species-to [species]" as setting player species.
+Carry out setting player species: now the player is the species understood.
+Report setting player species: say "You decide life would be better as a [the species understood]."
+
 test gender with "x me / push gender button / x me / push gender button / x me".
 test merfolk with "x me / up / down / push species button / x me / push gender button / x me / up / down / down / up".
+test sps with "set-my-species-to human / x me / set-my-species-to merfolk / x me".
+test spg with "switch-gender / x me / switch-gender / x me".
