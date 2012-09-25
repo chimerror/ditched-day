@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-0x02BFE020" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Inform 7 for Windows</generator>
+  <activeNode nodeId="node-0x02C072D0"/>
+  <item nodeId="node-0x02BFE020">
+    <command xml:space="preserve">- start -</command>
+    <result xml:space="preserve">Ditched Day&#x000A;An Interactive Fiction by Jason Mitchell&#x000A;Release 1 / Serial number 120924 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD&#x000A;&#x000A;Steam Tunnels Entryway&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">NO</temporary>
+    <children>
+      <child nodeId="node-0x02C04B18"/>
+      <child nodeId="node-0x02C04C98"/>
+      <child nodeId="node-0x02C072D0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02C04B18">
+    <command xml:space="preserve">abstract</command>
+    <result xml:space="preserve">(Steam Tunnels Entryway to Steam Tunnels Entryway)&#x000A;[Can't move Steam Tunnels Entryway: it would contain itself.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02C04C28"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02C04C28">
+    <command xml:space="preserve">showme abstract</command>
+    <result xml:space="preserve">There seems to be no such object anywhere in the model world.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02C04C98">
+    <command xml:space="preserve">gonear happy</command>
+    <result xml:space="preserve">Happy Place&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02C04D08"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02C04D08">
+    <command xml:space="preserve">gonear steam</command>
+    <result xml:space="preserve">Steam Tunnels Entryway&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02C072D0">
+    <command xml:space="preserve">test gender</command>
+    <result xml:space="preserve">(Testing.)&#x000A;&#x000A;&gt;[1] x me&#x000A;As handsome a gentleman as you've ever been.&#x000A;&#x000A;&gt;[2] push gender button&#x000A;There is an odd flash as you press the button.&#x000A;&#x000A;&gt;[3] x me&#x000A;As pretty a lady as you've ever been.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02C07420"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02C07420">
+    <command xml:space="preserve">x strange device</command>
+    <result xml:space="preserve">You see nothing special about the strange device.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02C07490"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02C07490">
+    <command xml:space="preserve">x gender buton</command>
+    <result xml:space="preserve">I only understood you as far as wanting to examine the gender button.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02C07500"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02C07500">
+    <command xml:space="preserve">x gender button</command>
+    <result xml:space="preserve">You see nothing special about the gender button.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02C07570"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02C07570">
+    <command xml:space="preserve">x me</command>
+    <result xml:space="preserve">As good-looking as ever.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+</Skein>
