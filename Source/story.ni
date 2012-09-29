@@ -48,6 +48,11 @@ Report going down when the player is batfolk:
 
 Section ii - Echolocation
 
+Echolocation description printing is an activity.
+
+Last for echolocation description printing:
+	say "[echolocation room exits]"
+
 Echolocating is an action applying to nothing.
 Understand "echolocate" or "echo" or "squeak" as echolocating.
 Instead of echolocating when the player is not batfolk:
@@ -55,7 +60,8 @@ Instead of echolocating when the player is not batfolk:
 Instead of echolocating when the player is batfolk and the location is lit:
 	say "There's no point, you can see fine."
 Report echolocating:
-	say "You let out a few sharp sounds to get the lay of the room.[paragraph break][echolocation room exits]"
+	say "You let out a few sharp sounds to get the lay of the room.";
+	silently try looking
 
 To say echolocation room exits:
 	let exits be a list of directions;
@@ -71,7 +77,8 @@ To say echolocation room exits:
 		say "You can leave this room to [exits with definite articles].".
 
 Rule for printing the description of a dark room when the player is batfolk:
-	say "(echolocating)[command clarification break][echolocation room exits]";
+	say "(echolocating)[command clarification break]";
+	carry out the echolocation description printing activity;
 	now the location is visited.
 
 Rule for printing the name of a dark room when the player is batfolk:
