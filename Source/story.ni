@@ -22,17 +22,17 @@ Section i - Going Up and Down
 
 Instead of going up when the player is human:
 	say "It's too high to jump, and you don't see anything to climb up."
-	
+
 Instead of going down when the player is human:
 	say "You're too high up, and you don't see anything to climb down."
-	
+
 Chapter 3 - Merfolk Rules
 
 Section i - Going Up and Down
 
 Report going up when the player is merfolk:
 	say "You swim up."
-	
+
 Report going down when the player is merfolk:
 	say "You swim down."
 
@@ -42,7 +42,7 @@ Section i - Going Up and Down
 
 Report going up when the player is batfolk:
 	say "You fly up."
-	
+
 Report going down when the player is batfolk:
 	say "You fly down."
 
@@ -50,11 +50,11 @@ Section ii - Echolocation
 
 Echolocating is an action applying to nothing.
 Understand "echolocate" or "echo" or "squeak" as echolocating.
-Instead of echolocating when the player is not batfolk: 
+Instead of echolocating when the player is not batfolk:
 	say "You wish you could."
-Instead of echolocating when the player is batfolk and the location is lit: 
+Instead of echolocating when the player is batfolk and the location is lit:
 	say "There's no point, you can see fine."
-Report echolocating: 
+Report echolocating:
 	say "You let out a few sharp sounds to get the lay of the room.[paragraph break][echolocation room exits]"
 
 To say echolocation room exits:
@@ -69,14 +69,14 @@ To say echolocation room exits:
 		say "The only way out of this room is [exits].";
 	otherwise:
 		say "You can leave this room to [exits with definite articles].".
-	
+
 Rule for printing the description of a dark room when the player is batfolk:
 	say "(echolocating)[command clarification break][echolocation room exits]";
 	now the location is visited.
 
 Rule for printing the name of a dark room when the player is batfolk:
 	say Location.
-	
+
 test echo with "set-my-species-to batfolk / echolocate / u / echo / d / n / n / squeak / gonear impossible" in the Steam Tunnels Entryway.
 
 Book II - Game World
@@ -114,11 +114,11 @@ Section i - Definition
 
 The strange device is a portable thing. "You found this strange device in Surjeet's room. You're not quite sure what it does, but there are buttons marked 'gender', 'human', 'merfolk', and 'batfolk'. They beckon you to press them."  The player carries the strange device.
 
-The gender button is part of the strange device. 
+The gender button is part of the strange device.
 
 Instead of pushing the gender button:
 	say "There is an odd flash as you press the button.";
-	if the player is male: 
+	if the player is male:
 		now the player is female;
 	otherwise:
 		now the player is male.
@@ -131,15 +131,15 @@ Instead of pushing the human button:
 	say "There is an odd flash as you press the button.";
 	now the player is human.
 
-The merfolk button is part of the strange device. Understand "mer" as the merfolk button.	
+The merfolk button is part of the strange device. Understand "mer" as the merfolk button.
 
 Instead of pushing the merfolk button when the player is merfolk, say "The button goes click, but nothing happens."
 
 Instead of pushing the merfolk button:
 	say "There is an odd flash as you press the button.";
 	now the player is merfolk.
-	
-The batfolk button is part of the strange device. Understand "bat" as the batfolk button.	
+
+The batfolk button is part of the strange device. Understand "bat" as the batfolk button.
 
 Instead of pushing the batfolk button when the player is batfolk, say "The button goes click, but nothing happens."
 
@@ -160,19 +160,19 @@ Chapter 1 - The Player
 
 Instead of examining the player when the player is male and the player is human:
 	say "As handsome a gentleman as you've ever been. An ex said your butt is your best feature."
-	
+
 Instead of examining the player when the player is female and the player is human:
 	say "As pretty a lady as you've ever been. An ex said your legs are your best feature."
-	
+
 Instead of examining the player when the player is male and the player is merfolk:
 	say "As handsome a gentleman as you've ever been. An ex said the dark scales of your tail were most fetching."
-	
+
 Instead of examining the player when the player is female and the player is merfolk:
 	say "As pretty a lady as you've ever been. An ex said the irridescent scales of your tail were most fetching."
-	
+
 Instead of examining the player when the player is male and the player is batfolk:
 	say "As handsome a gentleman as you've ever been. An ex said your broad wings were most fetching."
-	
+
 Instead of examining the player when the player is female and the player is batfolk:
 	say "As pretty a lady as you've ever been. An ex said your slender wings were most fetching."
 
