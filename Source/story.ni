@@ -1,5 +1,7 @@
 "Ditched Day" by Jason Mitchell
 
+Include Epistemology by Eric Eve.
+
 Book I - Rules
 
 Part A - General
@@ -20,41 +22,95 @@ Chapter 2 - Human Rules
 
 Section i - Going Up and Down
 
-Instead of going up when the player is human:
+Instead of going up when the player is human and the player is not in a vehicle:
 	say "It's too high to jump, and you don't see anything to climb up."
 
-Instead of going down when the player is human:
+Instead of going down when the player is human and the player is not in a vehicle:
 	say "You're too high up, and you don't see anything to climb down."
 
 Chapter 3 - Merfolk Rules
 
 Section i - Going Up and Down
 
-Report going up when the player is merfolk:
+Report going up when the player is merfolk and the player is not in a vehicle:
 	say "You swim up."
 
-Report going down when the player is merfolk:
+Report going down when the player is merfolk and the player is not in a vehicle:
 	say "You swim down."
 
 Chapter 4 - Batfolk Rules
 
 Section i - Going Up and Down
 
-Report going up when the player is batfolk:
+Report going up when the player is batfolk and the player is not in a vehicle:
 	say "You fly up."
 
-Report going down when the player is batfolk:
+Report going down when the player is batfolk and the player is not in a vehicle:
 	say "You fly down."
 
-Section ii - Echolocation
+Section ii - Darkness
+
+Instead of going when the room gone from is unlit and the room gone to is unlit and the player is not batfolk and the player does not carry a lit thing and the room gone to does not hold a lit thing:
+	say "[no wandering in dark rooms]"
+
+Instead of going when the room gone from is unlit and the room gone to is nowhere and the player is not batfolk and the player does not carry a lit thing:
+	say "[no wandering in dark rooms]"
+
+To say no wandering in dark rooms:
+	say "You don't want to wander around in the dark, you'd probably hurt yourself."
+
+Section iii - Echolocation
 
 Echolocation description printing is an activity.
 
 Last for echolocation description printing:
-	say "[echolocation room exits]"
+	say "[echolocation room exits]";
+	let location items be the list of things in the location that do not hold the player;
+	if the player is listed in location items:
+		remove the player from location items;
+	let item descriptions be a list of indexed text;
+	repeat with item running through location items:
+		add "[echolocation description for item]" to item descriptions;
+	if the number of entries in location items is greater than 0:
+		say "[line break]You can sense [item descriptions] here."
+
+Size is a kind of value. The sizes are tiny, small, medium, large, huge.
+
+A thing has a size. The size of a thing is usually medium.
+
+To say echolocation description for (item - a thing):
+	say "a ";
+	if the size of the item is:
+		-- tiny:
+			say "tiny ";
+		-- small:
+			say "small ";
+		-- large:
+			say "large ";
+		-- huge:
+			say "huge ";
+	say "thing".
+	[if the item is a container and the number of things the item holds is greater than 0:
+		say " (in which is ";
+		let held item descriptions be a list of 
+		repeat with held item running through the things the item holds:]
+			
+
+To say echolocation description for (creature - a person):
+	say "a ";
+	if the size of the creature is:
+		-- tiny:
+			say "petite ";
+		-- small:
+			say "little ";
+		-- large:
+			say "big ";
+		-- huge:
+			say "hulking ";
+	say "creature".
 
 Echolocating is an action applying to nothing.
-Understand "echolocate" or "echo" or "squeak" as echolocating.
+Understand "echolocate" or "echo" or "squeak" or "ping" as echolocating.
 Instead of echolocating when the player is not batfolk:
 	say "You wish you could."
 Instead of echolocating when the player is batfolk and the location is lit:
@@ -84,7 +140,7 @@ Rule for printing the description of a dark room when the player is batfolk:
 Rule for printing the name of a dark room when the player is batfolk:
 	say Location.
 
-test echo with "set-my-species-to batfolk / echolocate / u / echo / d / n / n / squeak / gonear impossible" in the Steam Tunnels Entryway.
+test echo with "set-my-species-to batfolk / echolocate / u / echo / d / n / n / squeak / gonear impossible / ping" in the Steam Tunnels Entryway.
 
 Book II - Game World
 
@@ -94,7 +150,13 @@ Steam Tunnels Entryway is a room. "This is the best place you know of to enter t
 
 The steam tunnels start to the north, in the room nicknamed 'The Foyer'. There is a dark alcove up above you and a lit one down below, but oddly, no ladders or stairs to reach them."
 
-The flashlight is in the Steam Tunnels Entryway. "A bright LED flashlight lies here on the ground." The flashlight is lit. Understand "light" as the flashlight.
+The flashlight is in the Steam Tunnels Entryway. "A bright LED flashlight lies here on the ground." The flashlight is lit. Understand "light" as the flashlight. The go kart is a vehicle in the Steam Tunnels Entryway. The go kart is huge.
+
+Instead of going up when the player is in the go kart:
+	say "It's not a plane."
+
+Instead of going down when the player is in the go kart:
+	say "You'd crash it at the bottom."
 
 Instead of examining the flashlight:
 	say "It seems like the switch is stuck in the ON position. You hope the batteries hold."
@@ -104,6 +166,8 @@ The Dark Alcove is above the Steam Tunnels Entryway. "There is not much here bes
 The Lit Alcove is below the Steam Tunnels Entryway. "You don't find much here besides pipes."
 
 The Foyer is north of the Steam Tunnels Entryway. "This room is nicknamed 'The Foyer', as it is considered the first room proper of the steam tunnels. The main entryway is to the south, and the tunnels continue to the north." The Foyer is dark.
+
+Betty is a woman in the Foyer. Betty is huge. The battery is a thing in the Foyer. The battery is small. The desk is scenery in the Foyer. The desk is large. The desk is enterable. The piece of paper is a thing on the desk. The bucket is a container in the Foyer. The bucket is large. The pencil lead is in the bucket. The pencil lead is tiny.
 
 The T-Junction is north of the Foyer. "The tunnels stretch east and west here, and you can go the way you came, back to the south." The T-Junction is dark.
 
